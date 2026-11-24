@@ -21,6 +21,7 @@ She builds end to end, from product idea and design to production, and cares mos
 
 - [Voxie](https://voxieai.vercel.app/): voice agents that speak your caller's language: listening, turn-taking, interruptions and the voice, in 17 languages. Open source: https://github.com/SomehowLiving/Voxie
 - [REX by Softknock](https://softknockai.vercel.app/): an autonomous revenue execution agent that follows up every failed payment by email, text and a friendly call, in the customer's own language.
+- [voiceaiagents.io](https://www.voiceaiagents.io/): a directory for finding and comparing voice AI agents for support, sales and booking, by pricing, features and alternatives. Agents can read it through an API and an MCP server.
 - [Inscribe](https://studio-bay-omega.vercel.app/): a browser extension and agent-native workshop built on WebMCP. It uses a website's own declared tools when it has them and infers capabilities when it doesn't, so an AI agent acts on meaning instead of pixels. https://github.com/SomehowLiving/Inscribe
 - [ScreenMesh](https://screenmesh.vercel.app/): move work between your devices without moving it through an app you don't trust. Local-first, end-to-end encrypted. https://github.com/SomehowLiving/screenmesh
 - [Onkey](https://www.npmjs.com/package/@onkey/sdk): self-hosted web3 authentication for everyone, with email login and smart contract wallets, published on npm as @onkey/sdk. https://github.com/SomehowLiving/onkey
