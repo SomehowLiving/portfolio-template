@@ -214,18 +214,24 @@ function WorkPage() {
         </div>
         <div className="relative mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {shown.map(({ p, i }) => (
-            <button
+            <div
               key={p.title}
-              onClick={() => setOpen(i)}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] text-left transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/[0.07]"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/[0.07]"
             >
-              <Thumb p={p} />
-              <div className="min-w-0 p-4 pr-10 sm:p-5 sm:pr-10">
-                <p className="text-lg font-medium">{p.title}</p>
-                <p className="mt-1 text-sm leading-snug text-white/60">{p.blurb}</p>
+              <button onClick={() => setOpen(i)} className="relative w-full flex-1 text-left">
+                <Thumb p={p} />
+                <div className="min-w-0 p-4 pr-10 sm:p-5 sm:pr-10">
+                  <p className="text-lg font-medium">{p.title}</p>
+                  <p className="mt-1 text-sm leading-snug text-white/60">{p.blurb}</p>
+                </div>
+                <ArrowUpRight className="absolute bottom-5 right-4 h-4 w-4 text-white/50 transition-colors group-hover:text-white" />
+              </button>
+              {/* Plain links too, so the projects can be followed without opening the spotlight. */}
+              <div className="flex gap-4 px-4 pb-4 text-sm text-white/60 sm:px-5 sm:pb-5">
+                {p.live && <a href={p.live} target="_blank" rel="noopener" className="underline-offset-4 hover:text-white hover:underline">site ↗</a>}
+                {p.code && <a href={p.code} target="_blank" rel="noopener" className="underline-offset-4 hover:text-white hover:underline">code ↗</a>}
               </div>
-              <ArrowUpRight className="absolute bottom-5 right-4 h-4 w-4 text-white/50 transition-colors group-hover:text-white" />
-            </button>
+            </div>
           ))}
         </div>
       </section>
